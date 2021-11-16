@@ -28,6 +28,16 @@
 						
 		}
 	});
+		  
+		  function detectDevice(){
+			  if(screen.height > screen.width) {
+				    console.log("直立");
+			  } else {
+				  				    console.log("橫立");
+			  }
+
+		  }
+}
 	  </script>
 	  
   </head>
@@ -39,6 +49,7 @@
         	  播放
 	      </button>
   	</div>
+		  detectDevice()
 	  
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
