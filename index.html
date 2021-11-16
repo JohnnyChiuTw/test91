@@ -1,7 +1,7 @@
 <html>
   <head>
-	 <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	 
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
@@ -14,12 +14,12 @@
 			button.addEventListener("click", function(evt){
 				console.log("button clicked")
 				if(vid_0.muted==true){
-					button.innerHTML="Pause";
+					button.innerHTML="暫停";
 					vid_0.play();
 					vid_0.muted=false;
 					console.log("按了Ａ");
 				}else{
-					button.innerHTML="Play";
+					button.innerHTML="播放";
 					vid_0.pause();
 					vid_0.muted=true;
 					console.log("按了Ｂ");
@@ -36,7 +36,7 @@
 	  <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 	  <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
 	      <button playbutton id="mutebutton" style='position: absolute; bottom: 10px'>
-        	  Play
+        	  播放
 	      </button>
   	</div> -->
 	  
