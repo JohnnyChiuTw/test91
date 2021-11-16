@@ -40,11 +40,11 @@
 	  <script>
 	  	  
 var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		  if (!isMobile) {
+		  if (isMobile) {
 			  console.log("按了手機");
         widthRatio = 0.95;
         heightRatio = 0.65;
-        var deg = 0;
+        var deg = 90;
         document.body.style.webkitTransform = 'rotate('+deg+'deg)'; 
         document.body.style.mozTransform    = 'rotate('+deg+'deg)'; 
         document.body.style.msTransform     = 'rotate('+deg+'deg)'; 
