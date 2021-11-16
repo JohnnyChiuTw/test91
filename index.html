@@ -29,7 +29,20 @@
 		}
 	});
 	
-	
+	document.addEventListener("DOMContentLoaded", function() {
+		const exampleTarget = document.querySelector('#vid');
+		
+		// detect target found
+    exampleTarget.addEventListener("targetFound", event => {
+      console.log("target found");
+    });
+
+    // detect target lost
+    exampleTarget.addEventListener("targetLost", event => {
+      console.log("target lost");
+    });
+		
+	});
 		  
 	  
   </script>
