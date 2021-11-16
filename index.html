@@ -70,6 +70,17 @@
       } else {
         console.log("Sorry, your browser doesn't support Device Orientation");
       }
+		  
+		  document.addEventListener("orientationchange", function(event){
+    switch(window.orientation) 
+    {  
+        case -90: case 90:
+            console.log("yes prat");
+            break; 
+        default:
+            console.log("yes land");
+    }
+});
 	  
 	  </script>
 	  <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
