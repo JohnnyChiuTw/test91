@@ -31,15 +31,23 @@
 	
 	document.addEventListener("DOMContentLoaded", function() {
 		const exampleTarget = document.querySelector('#example-target');
-		
+		var vid_0 = document.querySelector("#vid");
 		// detect target found
     exampleTarget.addEventListener("targetFound", event => {
       console.log("target found");
+	    if(vid_0.muted==true){
+	    	vid_0.muted=false;		    
+		vid_0.play();
+	    } 
     });
 
     // detect target lost
     exampleTarget.addEventListener("targetLost", event => {
       console.log("target lost");
+	    if(vid_0.muted==false){
+	    	vid_0.muted=true;		    
+		vid_0.pause();
+	    } 
     });
 		
 	});
