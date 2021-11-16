@@ -3,14 +3,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
+	  
+	  <style>
+      body {
+        margin: 0;
+      }
+      .example-container {
+        overflow: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+	  
   </head>
 
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind; uiScanning=no" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-     
-  
-      <a-assets>
+        <a-assets>
             <video 
 		   id="vid" 
 		   autoplay 
@@ -24,12 +36,12 @@
         </a-assets>
       
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-video src="#vid" width="3" height="2" position="0 0 0"></a-video>
-<!--       <a-entity mindar-image-target="targetIndex: 0"> -->
+	   
+	<a-entity mindar-image-target="targetIndex: 0">
 <!--         <a-plane src="#vid" position="0 0 0" height="2" width="3" rotation="0 0 0"></a-plane> -->
-	      
-<!--       </a-entity> -->
-	    <a-entity camera></a-entity>
+      		<a-video src="#vid" width="3" height="2" position="0 0 0"></a-video>
+	</a-entity> -->
+	    
     </a-scene>
   </body>
 </html>
