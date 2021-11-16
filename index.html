@@ -14,12 +14,12 @@
 			button.addEventListener("click", function(evt){
 				console.log("button clicked")
 				if(vid_0.muted==true){
-					button.innerHTML="Mute";
+					button.innerHTML="Pause";
 					vid_0.play();
 					vid_0.muted=false;
 					console.log("按了Ａ");
 				}else{
-					button.innerHTML="Unmute";
+					button.innerHTML="Play";
 					vid_0.pause();
 					vid_0.muted=true;
 					console.log("按了Ｂ");
@@ -36,7 +36,7 @@
 	  <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 	  <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
 	      <button playbutton id="mutebutton" style='position: absolute; bottom: 10px'>
-        	  Unmute
+        	  Play
 	      </button>
   	</div> -->
 	  
