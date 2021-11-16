@@ -7,10 +7,25 @@
   </head>
 
   <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind; uiScanning=no" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      
+      <a-assets>
+            <video src="https://johnnychiutw.github.io/test91/4.mp4"
+                preload="auto" 
+		   id="vid" 
+		   response-type="arraybuffer" 
+		   loop
+                   crossorigin 
+		   webkit-playsinline 
+		   autoplay 
+		   unmute
+		   playsinline
+		   ></video>
+        </a-assets>
+      
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+        <a-plane src="#vid" position="0 0 0" height="2" width="3" rotation="0 0 0"></a-plane>
       </a-entity>
     </a-scene>
   </body>
