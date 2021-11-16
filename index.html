@@ -5,34 +5,49 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
-	  
-<!-- 	  <style>
-      body {
-        margin: 0;
-      }
-      .example-container {
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-    </style> -->
+	  <script>
+	  AFRAME.registerComponent('button', {
+		init: function () {	    
+			var button = document.querySelector("#mutebutton");
+
+			button.addEventListener("click", function(evt){
+			
+				if(this.vid.muted==true){
+					button.innerHTML="Mute";
+					this.vid.muted=false;
+				}else{
+					button.innerHTML="Unmute";
+					this.vid.muted=true;
+				}
+			}
+						
+		}
+	});
+	  </script>
 	  
   </head>
 
   <body>
+	  <div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
+	      <button id="mutebutton" style='position: absolute; bottom: 10px'>
+        	  Unmute
+	      </button>
+  	</div> -->
+	  
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
             <video 
+		   preload="auto"
 		   id="vid" 
-		   autoplay = "true"
-		   loop = "true"
+		   autoplay
+		   response-type="arraybuffer" 
+		   loop
                    crossorigin 
 		   webkit-playsinline 
 		   muted
 		   playsinline
 		   src = "https://johnnychiutw.github.io/test91/drink2vedio.mp4"
-		   preload="auto"></video>
+		   ></video>
         </a-assets>
       
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
