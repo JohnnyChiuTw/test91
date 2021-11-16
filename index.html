@@ -9,15 +9,17 @@
 	  AFRAME.registerComponent('button', {
 		init: function () {	    
 			var button = document.querySelector("#mutebutton");
-
+			var vid = document.querySelector("#vid");
 			button.addEventListener("click", function(evt){
-			
-				if(this.vid.muted==true){
+					
+				if(vid.muted==true){
 					button.innerHTML="Mute";
-					this.vid.muted=false;
+					vid.pause();
+					vid.muted=false;
 				}else{
 					button.innerHTML="Unmute";
-					this.vid.muted=true;
+					vid.play();
+					vid.muted=true;
 				}
 			}
 						
