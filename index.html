@@ -28,18 +28,12 @@
 						
 		}
 	});
-		  
-		  function detectDevice(){console.log("方法");
-			  if(screen.availHeight > screen.availWidth) {
-				    console.log("直立");
-			  } else {
-				  				    console.log("橫立");
-			  }
-
-		  }
-
-	  </script>
-	  
+	if (window.DeviceOrientationEvent) {
+		console.log("yes have");
+       		 window.addEventListener("deviceorientation", deviceOrientationListener);
+      	} else {
+        	console.log("Sorry, your browser doesn't support Device Orientation");
+      	}
   </head>
 
   <body>
@@ -49,7 +43,7 @@
         	  播放
 	      </button>
   	</div>
-		  detectDevice()
+		 
 	  
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-assets>
