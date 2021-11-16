@@ -9,18 +9,18 @@
 	  AFRAME.registerComponent('button', {
 		init: function () {	    
 			var button = document.querySelector("#mutebutton");
-			var vid = document.querySelector("#vid");
+			var vid_0 = document.querySelector("#vid");
 			button.addEventListener("click", function(evt){
-					
-				if(vid.muted==true){
+				console.log("button clicked")
+				if(vid_0.muted==true){
 					button.innerHTML="Mute";
-					vid.pause();
-					vid.muted=false;
+					vid_0.pause();
+					vid_0.muted=false;
 					console.log("按了Ａ");
 				}else{
 					button.innerHTML="Unmute";
-					vid.play();
-					vid.muted=true;
+					vid_0.play();
+					vid_0.muted=true;
 										console.log("按了Ｂ");
 				}
 			});
