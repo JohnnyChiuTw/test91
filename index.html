@@ -37,6 +37,7 @@
     exampleTarget.addEventListener("targetFound", event => {
       console.log("target found");
 	    if(vid_0.muted==true){
+		button.innerHTML="暫停";
 	    	vid_0.muted=false;		    
 		vid_0.play();
 	    } 
@@ -46,13 +47,14 @@
     exampleTarget.addEventListener("targetLost", event => {
       console.log("target lost");
 	    if(vid_0.muted==false){
+		button.innerHTML="播放";
 	    	vid_0.muted=true;		    
 		vid_0.pause();
 	    } 
     });
 		
 	});
-		  
+		  	  
 	  
   </script>
   </head>
