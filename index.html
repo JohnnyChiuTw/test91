@@ -15,12 +15,12 @@
 				console.log("button clicked")
 				if(vid_0.muted==true){
 					button.innerHTML="Mute";
-					vid_0.pause();
+					vid_0.play();
 					vid_0.muted=false;
 					console.log("按了Ａ");
 				}else{
 					button.innerHTML="Unmute";
-					vid_0.play();
+					vid_0.pause();
 					vid_0.muted=true;
 					console.log("按了Ｂ");
 				}
